@@ -1,3 +1,4 @@
+# Given unsorted Linked list, remove duplicates and return head of linked list
 class Node:
     def __init__(self, value):
         self.val = value
@@ -10,15 +11,10 @@ class MyLinkedList:
 
     def list2link(self, list):
         current = self.head = Node(-1)
-
         for i in list:
             current.next = Node(i)
             current = current.next
-
-
         return self.head.next
-
-
 
     def print_list(self, linkedlist):
         li = []
@@ -28,30 +24,23 @@ class MyLinkedList:
             current = current.next
         return li
 
-
     def removeDupes(self, linked):
-
         if linked is None or linked.next is None:
             return linked
         hash_set = set()
         current = linked
-        hash_set.add(self.current.val)
+        hash_set.add(current.val)
 
         while(current.next is not None):
-            if current.next.data in hash_set:
+            if current.next.val in hash_set:
                 current.next = current.next.next
             else:
                 hash_set.add(current.next.val)
                 current = current.next
-
         return linked
 
-
-
-
-
 obj = MyLinkedList()
-linked = obj.list2link([2,1,5,7,4])
+linked = obj.list2link([2,1,3,2,5,4,7,4])
 #print(linked)
 result_linked = obj.removeDupes(linked)
 print(obj.print_list(result_linked))
