@@ -1,7 +1,6 @@
 # Fibonacci approach :
 class Solution:
     def climbStairs(self, n):
-
         first = 1  # fibonacci series starting from 1
         second = 2
 

@@ -3,7 +3,7 @@ class Node:
         self.val = value
         self.next = None
 
-########### ALWAYS assign Head and size as NONE adn 0 respectively first *******
+########### ALWAYS assign Head and size as NONE and 0 respectively first *******
 class MyLinkedList:
     def __init__(self):
         self.head = None
