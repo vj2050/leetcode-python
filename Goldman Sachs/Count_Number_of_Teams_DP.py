@@ -1,5 +1,5 @@
 # defaultdict are almost same except for the fact that defualtdict never raises a KeyError. It provides a default value for the key that does not exists.
-
+# Time Complexity : O(N^2)
 from collections import defaultdict
 
 class Solution:
