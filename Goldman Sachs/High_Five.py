@@ -1,4 +1,4 @@
-# Time Complexity  : O(N+M) where N is length of original list and M is length of dictionary
+# Time Complexity  : O(N+M) where N is length of original list and M is length of dictionary. worst case o(n+n) = o(n)
 class Solution:
     def highFive(self, items):
         dictt = {}
