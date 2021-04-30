@@ -4,7 +4,7 @@ class Solution:
         myheap =[]
         a = 0
         for i in nums:
-            heappush(myheap, i*-1)   # so that it is converted tp smallest element in heap and will be at heap[0] and popped first
+            heappush(myheap, i*-1)   # so that it is converted to smallest element in heap and will be at heap[0] and popped first
         for i in range(k):
             a = heappop(myheap)
         return a*-1   # to convert it back to positive
