@@ -11,6 +11,7 @@ class Solution:
         for start, end in intervals[1:]:
             if myheap[0] <= start:
                 heapq.heappop(myheap)  # always reorders itself and min(heap) is popped
+                print(myheap)
             heapq.heappush(myheap, end)
         return len(myheap)
 

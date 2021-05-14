@@ -5,11 +5,8 @@ class Solution:
         """
         rows = len(matrix)
         cols = len(matrix[0])
-
         if clockwise:
             matrix[:] = matrix[::-1]
-            # print(matrix)
-
             for i in range(rows):
                 for j in range(i, cols):
                     matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
@@ -20,7 +17,6 @@ class Solution:
             for i in range(rows - 1, -1, -1):
                 for j in range(i, -1, -1):
                     matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-
             # now reverse the matrix to get the original matrix
             matrix[:] = matrix[::-1]
             print("anticlockwise ", matrix)
